@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --cor-de-brackground : #f1d14e;
+    --cor-estrada-tartarugas : #71803c;
+    --cor-estradas : #696666;
+}
+
+.campo_de_fundo {
+    background-color: var(--cor-de-brackground);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.estrada_um {
+    width: 100%;
+    height: 80px;
+    background: var(--cor-estradas);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 200px 10px 10px 10px;
+}
+
+.estrada_dois {
+    width: 100%;
+    height: 80px;
+    background: var(--cor-estradas);    
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 20px 10px 10px 10px;
+}
+
+.tartarugas {
+    background: repeating-linear-gradient(to right, var(--cor-estrada-tartarugas) 0 20px, transparent 20px 40px);
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10%;
+    margin: 37px;
+}
