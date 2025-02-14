@@ -46,15 +46,20 @@
     margin: 20px 10px 10px 10px;
 }
 
+.estrada_um, .estrada_dois {
+    overflow: hidden;
+}
+
 .tartarugas {
     background: repeating-linear-gradient(to right, var(--cor-estrada-tartarugas) 0 20px, transparent 20px 40px);
     display: flex;
     position: absolute;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 200%;
     height: 10%;
     margin: 37px;
+    animation: mover_estrada 2s linear infinite;
 }
 
 .lista {
@@ -62,6 +67,14 @@
     gap: 50%;
     position: relative;
     list-style: none;
+}
+
+#botao_freiar {
+    background-color: red;
+}
+
+#botao_acelerar {
+    background-color: #1e1e20;
 }
 
 .botoes {
@@ -73,9 +86,32 @@
     padding: 10px;
     border-radius: 8px;
     color: #ffffff;
-    background-color: #1e1e20;
 }
 
-.botoes:hover{
-    background-color: #6e728b;
+
+#botao_freiar:hover {
+    background-color: #b3152a;
+}
+
+#botao_acelerar:hover {
+    background-color: #3b2f72;
+}
+
+.carro_1 {
+    width: 80px;
+    height: 80px;
+    transform: rotate(90deg);
+    
+}
+
+.carro_2 {
+    width: 80px;
+    height: 80px;
+    transform: rotate(90deg);
+    
+}
+
+@keyframes mover_estrada {
+    from { transform: translateX(0);}
+    to { transform: translateY(-100%);}
 }
