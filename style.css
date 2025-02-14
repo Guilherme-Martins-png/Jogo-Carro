@@ -65,7 +65,7 @@
     width: 200%;
     height: 10%;
     margin: 37px;
-    animation: mover_estrada 2s linear infinite;
+    animation: mover_estrada 5s linear infinite;
 }
 
 .lista {
@@ -118,6 +118,6 @@
 }
 
 @keyframes mover_estrada {
-    from { transform: translateX(0);}
-    to { transform: translateY(-100%);}
+    0% { transform: translate(0,0);}
+    100% {transform: translate(30%);}
 }
