@@ -1,28 +1,45 @@
-const road1 = document.querySelector('.estrada_um .tartarugas');
-const road2 = document.querySelector('.estrada_dois .tartarugas');
-const acelerarBtn = document.getElementById('botao_acelerar');
-const freiarBtn = document.getElementById('botao_freiar');
+const tartarugas1 = document.getElementById('tartarugas1');
+const tartarugas2 = document.getElementById('tartarugas2');
+const acelerarBtn = document.getElementById('acelerar');
+const freiarBtn = document.getElementById('freiar');
 
-let speed = 2;
+let position = 0;
+let velo = 2;
+let pausar = false;
+let animacaoID;
 
-function updateSpeed() {
-    road1.style.animationDuration = '${speed}s';
-    road2.style.animationDuration = '${speed}s';
-}
-
-acelerarBtn.addEventListener ('click' , () => {
-    if (speed > 0.5) {
-        speed -= 0.2;
-        updateSpeed();
+function animacao() {
+    if (!pausar) {
+        position -= velo;
+        if (position < -100) {
+            position = 0
+        }
+        tartarugas1.style.transform = `translateX(${position}%) translateY(-50%)`;
+        tartarugas2.style.transform = `translateX(${position}%) translateY(-50%)`;
     }
+
+    animacaoID = requestAnimationFrame(animacao);
 }
 
-);
+
+animacao();
+
+acelerarBtn.addEventListener('click', () => {
+    if (pausar) {
+        pausar = false;
+        animacao();
+    }
+    if (velo < 10) {
+        velo += 1;
+    }
+});
 
 freiarBtn.addEventListener('click', () => {
-    if (speed < 5 ) {
-        speed += 0.2;
-        updateSpeed();
+    if (velo > 0) {
+        velo -= 1;
     }
-
+    if (velo === 0) {
+        pausar = true;
+        cancelAnimationFrame(animacaoID);
+    }
 });

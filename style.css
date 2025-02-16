@@ -10,6 +10,8 @@
     --cor-de-brackground : #2f723e;
     --cor-estrada-tartarugas : #fcff58;
     --cor-estradas : #696666;
+    --cor-botao-acelerar: rgb(4, 43, 82);
+    --cor-botao-freiar:rgb(226, 80, 80);  
 }
 
 .campo_de_fundo {
@@ -65,7 +67,7 @@
     width: 200%;
     height: 10%;
     margin: 37px;
-    animation: mover_estrada 5s linear infinite;
+    transform: translateY(-50%)
 }
 
 .lista {
@@ -75,33 +77,43 @@
     list-style: none;
 }
 
-#botao_freiar {
-    background-color: red;
+.botao_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 80%;
 }
 
-#botao_acelerar {
-    background-color: #1e1e20;
-}
 
 .botoes {
-    align-items: center;
-    display: flex;
-    text-decoration: none;
-    font-family:Arial, Helvetica, sans-serif;
-    border: solid black 2px;
-    padding: 10px;
-    border-radius: 8px;
+    background-color: #fcff58;
+    border-radius: 10px;
+    border: solid 1px;
+    padding: 15px;
     color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#acelerar {
+    background-color: var(--cor-botao-acelerar) ;
+    border: solid 1px #6f82f16c;
+}
+
+#freiar {
+    background-color: var(--cor-botao-freiar);
+    border: solid 1px lightcoral;
+}
+
+#acelerar:hover {
+    background-color: rgb(45, 70, 97);
+}
+
+#freiar:hover{
+    background-color: crimson;
 }
 
 
-#botao_freiar:hover {
-    background-color: #b3152a;
-}
-
-#botao_acelerar:hover {
-    background-color: #3b2f72;
-}
 
 .carro_1 {
     width: 80px;
@@ -115,9 +127,4 @@
     height: 80px;
     transform: rotate(90deg);
     
-}
-
-@keyframes mover_estrada {
-    0% { transform: translate(0,0);}
-    100% {transform: translate(30%);}
 }
