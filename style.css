@@ -64,10 +64,9 @@
     position: absolute;
     align-items: center;
     justify-content: center;
-    width: 200%;
+    width: 400vmax;
     height: 10%;
     margin: 37px;
-    transform: translateY(-50%)
 }
 
 .lista {
@@ -128,3 +127,4 @@
     transform: rotate(90deg);
     
 }
+
