@@ -20,17 +20,26 @@ Este é um projeto de um jogo de corrida desenvolvido utilizando **JavaScript**,
 
 ----------------------
 🛠️ Tecnologias Utilizadas
-HTML
+
+**HTML**
+
 [![HTML](https://img.shields.io/badge/HTML-5-orange?logo=html5)](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white
 )
   
-CSS
+**CSS**
+
 ![CSS](https://img.shields.io/badge/CSS-3-blue?logo=css3)
 
-JavaScript
- ![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?logo=javascript)
+**JavaScript**
+
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?logo=javascript)
 --------------------
- Contribuição
+
+**Contribuição**
+
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests.
 Se quiser entrar em contato para discutir o projeto, colaborações ou feedback, você pode me encontrar no LinkedIn:
+
+
+
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](https://www.linkedin.com/in/guilherme-rfmartins/)
